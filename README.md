@@ -29,17 +29,14 @@ Open the terraform.tfvars file and update the variables as per your requirements
 ### Step 4: Initialize Terraform
 Initialize Terraform in the repository directory by running the following command:
 
-Copy code
 terraform init
 
 ### Step 5: Plan and Apply
 Now, let's review the planned infrastructure changes before applying them. Run the following command:
 
-Copy code
 terraform plan
 If the plan looks good, proceed with applying the changes:
 
-Copy code
 terraform apply
 Terraform will create the necessary AWS resources, including the EC2 instance, security groups, ALB, and associated resources.
 
@@ -49,7 +46,6 @@ Once the Terraform apply is successful, you can access Jenkins by opening the AL
 ### Step 7: Jenkins Setup
 On the Jenkins web interface, you'll be prompted to enter an initial administrator password. SSH into your EC2 instance using the key pair created earlier, and retrieve the password by running the following command:
 
-Copy code
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Copy the password and paste it into the Jenkins web interface to complete the initial setup.
 
@@ -59,7 +55,6 @@ To enable HTTPS for your Jenkins installation, you can configure SSL/TLS certifi
 ### Step 9: Clean Up
 To clean up and destroy the provisioned resources when you're done, run the following command:
 
-Copy code
 terraform destroy
 Confirm the destruction by typing "yes" when prompted.
 
